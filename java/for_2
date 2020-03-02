@@ -1,0 +1,19 @@
+package Practice;
+import java. util.Scanner;
+public class Array_04 {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int cnt = 0;
+		for(int x=1; x<=6; x++) {
+			for(int y=1; y<=6; y++) {
+				if(x+y == 6) {
+					cnt++;
+				}
+			}
+		}System.out.println(cnt);
+	
+	}
+
+}
