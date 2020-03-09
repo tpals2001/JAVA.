@@ -1,0 +1,82 @@
+package Practice;
+
+public class Product {
+	
+	int price ;
+	int bonusPoint ;
+	
+	Product(int price){
+		this.price = price ;
+		this.bonusPoint = (int)(price/10.0);
+	}
+
+}
+
+	class Tv extends Product {
+
+		Tv(){
+			super(100);
+		}
+		public String toString() {
+			return "Tv" ; 
+		}
+		
+	}
+	
+	class Radio extends Product{
+		
+		Radio(){
+			super(200);
+		}
+		
+		public String toString() {
+			return "Radio" ; 
+		}
+		
+	}
+	
+	
+	class Buyer {
+		int money = 1000;
+		int bonusPoint =0  ;
+		
+		void buy(Product p) {
+			if(money<p.price) {
+				return;
+			}
+			
+			money -= p.price ;
+			
+			bonusPoint += p.bonusPoint ; 
+			System.out.println(p);
+			
+			
+		}
+			
+	}
+	
+	class Test{
+		
+		public static void main(String[] args) {
+			
+			
+			
+			
+			Buyer ab = new Buyer();
+			
+			ab.buy(new Tv());
+			ab.buy(new Radio());
+			
+			System.out.println(ab.money);
+			System.out.println(ab.bonusPoint);
+			
+			
+			
+			
+			
+		}
+		
+	}
+			
+		
+		
