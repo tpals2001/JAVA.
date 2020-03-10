@@ -1,0 +1,32 @@
+package Practice;
+import java.util.Scanner;
+public class Excercise6_2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int[] ch = new int[26];
+		
+		String str = sc.nextLine();
+		
+		for(int i =0 ; i<ch.length; i++) {
+			ch [i] = -1 ; 
+		}
+	
+		for(int i=0; i<str.length(); i++) {
+		int value =str.charAt(i);
+		
+		if(ch[value-97]==-1) {
+			ch[value-97] = i ; 
+		}
+		}
+		
+		for(int i =0 ; i<ch.length; i++) {
+			System.out.println(ch[i]+",");
+		}
+	}
+		
+
+
+  	}
+
+
