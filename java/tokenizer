@@ -1,0 +1,30 @@
+package Practice;
+import java.util.*;
+public class Excercise6_2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String source = "1,a,100,100|2,b,90,90";
+		
+		StringTokenizer ab = new StringTokenizer(source,"|");
+		
+		while(ab.hasMoreTokens()) {
+			String token = ab.nextToken();
+			
+			StringTokenizer ac = new StringTokenizer(token, ",");
+			
+			while(ac.hasMoreTokens()) {
+				System.out.println(ac.nextToken());
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+		
+}
