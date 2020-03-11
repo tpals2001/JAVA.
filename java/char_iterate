@@ -1,0 +1,39 @@
+package Practice;
+import java.util.*;
+public class Excercise6_2 {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		
+	
+		
+		
+		
+		for(int k =0; k<T ; k++) {
+			int R = sc.nextInt();
+			sc.nextLine();
+			String S = sc.nextLine();
+			String P ="";
+		for(int i =0; i<S.length() ; i++) {
+			for(int j = 0 ; j<R; j++) {
+				 P += S.charAt(i);
+				
+				
+				
+				}
+			
+			
+			
+			}System.out.println(P);
+		}
+		
+		
+		
+		
+	}
+		
+}
+
+
