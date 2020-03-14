@@ -1,0 +1,89 @@
+package Practice;
+import java.util.*;
+import java.io.*;
+public class Product {
+	static Scanner sc = new Scanner(System.in);
+	static CharacterProcess ch = new CharacterProcess();
+	
+public static void main(String[] args) {
+	
+	
+		quiz1();
+	
+}
+	
+	public static void quiz1() {
+		
+		
+		
+		String str = sc.nextLine();
+		
+		try {
+			System.out.println(ch.counterAlpha(str)); 
+			
+		} catch (CharCheckException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+		
+		
+	}
+
+//	<문제 1>
+//	 0. 패키지 : java12_exception.quiz
+//
+//	 1. 사용자정의 예외클래스 : java12_exception.quiz.exception.CharCheckException
+//
+//	 2. 클래스 : java12_exception.quiz.CharacterProcess
+//		[디폴트 생성자]
+//
+//		[메소드]	public int countAlpha(String s){}
+//		//전달된 문자열값에서 영문자가 몇개인지 카운트해서 리턴
+//		//단, 공백문자가 있으면, CharCheckException 발생
+//
+//	 3. 실행용 클래스 : java12_exception.quiz.ExceptionQuizEx (main 포함)
+//		main() 메소드에서 quiz1() 메소드를 호출하여 실행
+//
+//		실행할 메소드 작성 : public static void quiz1(){}
+//
+//		키보드로 문자열을 입력받아(Scanner 사용)
+//		countAlpha 메소드로 문자열 전달하고, 실행결과 받아 출력함.
+//		- 반드시 try ~ catch 문 사용.
+//		에러메시지 : "체크할 문자열 안에 공백 포함할 수 없습니다."
+	
+}
+
+class CharacterProcess{
+	
+	int cnt =0 ; 
+	
+	CharacterProcess(){
+		
+	}
+	
+	
+	public int counterAlpha(String s) throws CharCheckException {
+		
+			
+		
+		
+		for (int i = 0; i < s.length(); i++) {
+			
+			if(s.charAt(i) == ' ') {
+				throw new CharCheckException();
+			}
+			
+			
+			if('a'<=s.charAt(i)&& s.charAt(i)<='z' ||'A'<=s.charAt(i)&& s.charAt(i)<='Z' ) {
+				cnt ++ ; 
+			}
+		}
+			return cnt;
+		
+		}
+		
+	}
+	
+	
