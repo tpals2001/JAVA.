@@ -1,0 +1,40 @@
+package Practice;
+import java.io.*;
+import java.util.*;
+import java.net.*;
+public class ClientEx {
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	File file = new File("C:/Users/moon/Desktop/FileJo/test.txt" );
+	
+	ObjectInputStream obj = null;
+	
+	try {
+		obj = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
+		
+		Point obj1 = (Point)obj.readObject();
+		Point obj2 =(Point)obj.readObject();
+		
+		System.out.println(obj1);
+		System.out.println(obj2);
+		
+		
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+	}finally {
+		try {
+			if(obj != null) obj.close();
+		} catch (Exception e2) {
+			// TODO: handle exception
+		}
+	}
+	
+	
+	
+	
+	}
+
+}
